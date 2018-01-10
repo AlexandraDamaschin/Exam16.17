@@ -10,6 +10,7 @@ using Exam16._17.Models.StudentLectureModel;
 
 namespace Exam16._17.Controllers
 {
+    [Authorize(Roles = "Lecture")]
     public class LecturesController : Controller
     {
         private AttendDBContext db = new AttendDBContext();
