@@ -30,7 +30,8 @@ namespace Exam16._17.Migrations.AttendMigrations
             //
             // SeedSubjects(context);
             // SeedStudents(context);
-            SeedStudentSubjects(context);
+            //  SeedStudentSubjects(context);
+            SeedLectures(context);
         }
 
         private void SeedSubjects(AttendDBContext context)
@@ -64,6 +65,21 @@ namespace Exam16._17.Migrations.AttendMigrations
                 new StudentSubject { StudentId = "S02", SubjectId = 3 },
                 new StudentSubject { StudentId = "S02", SubjectId = 4 }
              );
+            context.SaveChanges();
+        }
+
+        //seed lectures and each lecture teaching one subject each
+        private void SeedLectures(AttendDBContext context)
+        {
+            context.Lectures.AddOrUpdate(
+                new Lecture { LectureId = 1, LectureName = "John K" },
+                new Lecture { LectureId = 2, LectureName = "Kathy B" }
+             );
+
+            context.LectureSubjects.AddOrUpdate(
+                new LectureSubject { LectureId = 1, SubjectId = 1 },
+                new LectureSubject { LectureId = 2, SubjectId = 4 }
+            );
             context.SaveChanges();
         }
 
