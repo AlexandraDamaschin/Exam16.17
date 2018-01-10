@@ -29,7 +29,8 @@ namespace Exam16._17.Migrations.AttendMigrations
             //    );
             //
             // SeedSubjects(context);
-           // SeedStudents(context);
+            // SeedStudents(context);
+            SeedStudentSubjects(context);
         }
 
         private void SeedSubjects(AttendDBContext context)
@@ -51,6 +52,18 @@ namespace Exam16._17.Migrations.AttendMigrations
                   new Student { StudentId = "S01", FirstName = "Josh", LastName = "Knock" },
                   new Student { StudentId = "S02", FirstName = "Marry", LastName = "Lee" }
                 );
+            context.SaveChanges();
+        }
+
+        //seed student subjects
+        private void SeedStudentSubjects(AttendDBContext context)
+        {
+            context.StudentSubjects.AddOrUpdate(
+                new StudentSubject { StudentId = "S01", SubjectId = 1 },
+                new StudentSubject { StudentId = "S01", SubjectId = 2 },
+                new StudentSubject { StudentId = "S02", SubjectId = 3 },
+                new StudentSubject { StudentId = "S02", SubjectId = 4 }
+             );
             context.SaveChanges();
         }
 
