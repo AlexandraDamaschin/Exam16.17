@@ -32,7 +32,7 @@ namespace Exam16._17.Migrations.AttendMigrations
             // SeedStudents(context);
             //  SeedStudentSubjects(context);
             //SeedLectures(context);
-            SeedAttendaces(context);
+           // SeedAttendaces(context);
         }
 
         private void SeedSubjects(AttendDBContext context)
