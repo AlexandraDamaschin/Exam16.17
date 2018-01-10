@@ -28,7 +28,8 @@ namespace Exam16._17.Migrations.AttendMigrations
             //      new Person { FullName = "Rowan Miller" }
             //    );
             //
-            SeedSubjects(context);
+            // SeedSubjects(context);
+           // SeedStudents(context);
         }
 
         private void SeedSubjects(AttendDBContext context)
@@ -42,5 +43,16 @@ namespace Exam16._17.Migrations.AttendMigrations
                 );
             context.SaveChanges();
         }
+
+        private void SeedStudents(AttendDBContext context)
+        {
+            context.Students.AddOrUpdate(
+                  p => p.StudentId,
+                  new Student { StudentId = "S01", FirstName = "Josh", LastName = "Knock" },
+                  new Student { StudentId = "S02", FirstName = "Marry", LastName = "Lee" }
+                );
+            context.SaveChanges();
+        }
+
     }
 }
