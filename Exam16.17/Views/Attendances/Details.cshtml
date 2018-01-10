@@ -1,0 +1,50 @@
+﻿@model Exam16._17.Models.StudentLectureModel.Attendance
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Attendance</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.assocStudent.FirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.assocStudent.FirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.assocSubject.SubjectName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.assocSubject.SubjectName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AttendanceDate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AttendanceDate)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Present)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Present)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.AttendanceId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
