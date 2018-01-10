@@ -16,9 +16,10 @@ namespace Exam16._17.Controllers
         private AttendDBContext db = new AttendDBContext();
 
         // GET: Students
-        public ActionResult Index()
+        public ActionResult Index(string searching)
         {
-            return View(db.Students.ToList());
+            // return View(db.Students.ToList());
+            return View(db.Students.Where(x => x.FirstName.Contains(searching) || searching == null).ToList());
         }
 
         // GET: Students/Details/5
