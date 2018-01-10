@@ -31,7 +31,8 @@ namespace Exam16._17.Migrations.AttendMigrations
             // SeedSubjects(context);
             // SeedStudents(context);
             //  SeedStudentSubjects(context);
-            SeedLectures(context);
+            //SeedLectures(context);
+            SeedAttendaces(context);
         }
 
         private void SeedSubjects(AttendDBContext context)
@@ -80,6 +81,18 @@ namespace Exam16._17.Migrations.AttendMigrations
                 new LectureSubject { LectureId = 1, SubjectId = 1 },
                 new LectureSubject { LectureId = 2, SubjectId = 4 }
             );
+            context.SaveChanges();
+        }
+
+        //seed attendance
+        private void SeedAttendaces(AttendDBContext context)
+        {
+            context.Attendances.AddOrUpdate(
+                new Attendance { AttendanceId = 1, AttendanceDate = DateTime.Now, SubjectId = 1, StudentId = "S01", Present = true },
+                new Attendance { AttendanceId = 2, AttendanceDate = DateTime.Now, SubjectId = 2, StudentId = "S01", Present = false },
+                new Attendance { AttendanceId = 3, AttendanceDate = DateTime.Now, SubjectId = 3, StudentId = "S02", Present = true },
+                new Attendance { AttendanceId = 4, AttendanceDate = DateTime.Now, SubjectId = 4, StudentId = "S02", Present = true }
+                );
             context.SaveChanges();
         }
 
