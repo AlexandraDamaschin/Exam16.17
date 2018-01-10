@@ -9,11 +9,11 @@ Second
 Add migrations and update database
 
 for the main migration
-add-Migration -ConfigurationTypeName StudentLecture.Migrations.ApplicationUsersMigrations.Configuration
-update-database -ConfigurationTypeName StudentLecture.Migrations.ApplicationUsersMigrations.Configuration
+add-Migration -ConfigurationTypeName Exam16._17.Migrations.Configuration
+update-database -ConfigurationTypeName Exam16._17.Migrations.Configuration
 
 for a certain migration
-add-Migration -ConfigurationTypeName StudentLecture.Migrations.AttendMigrations.Configuration
-update-database -ConfigurationTypeName StudentLecture.Migrations.AttendMigrations.Configuration
+add-Migration -ConfigurationTypeName Exam16._17.Migrations.AttendMigrations.Configuration
+update-database -ConfigurationTypeName Exam16._17.Migrations.AttendMigrations.Configuration
 
 --------------------------------------------------------------------------------------------------------------------------------
