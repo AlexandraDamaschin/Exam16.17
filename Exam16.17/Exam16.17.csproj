@@ -205,6 +205,10 @@
     <Compile Include="Migrations\201801101718570_initMigration.Designer.cs">
       <DependentUpon>201801101718570_initMigration.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\AttendMigrations\201801101720007_AttendMigration.cs" />
+    <Compile Include="Migrations\AttendMigrations\201801101720007_AttendMigration.Designer.cs">
+      <DependentUpon>201801101720007_AttendMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\AttendMigrations\Configuration.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -296,6 +300,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201801101718570_initMigration.resx">
       <DependentUpon>201801101718570_initMigration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\AttendMigrations\201801101720007_AttendMigration.resx">
+      <DependentUpon>201801101720007_AttendMigration.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
