@@ -4,9 +4,7 @@ namespace Exam16._17.Migrations
     using Microsoft.AspNet.Identity.EntityFramework;
     using Models;
     using System;
-    using System.Data.Entity;
     using System.Data.Entity.Migrations;
-    using System.Linq;
 
     internal sealed class Configuration : DbMigrationsConfiguration<Models.ApplicationDbContext>
     {
@@ -15,23 +13,13 @@ namespace Exam16._17.Migrations
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(Models.ApplicationDbContext context)
+        protected override void Seed(ApplicationDbContext context)
         {
-            //  This method will be called after migrating to the latest version.
-
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
-            //SeedUsers(context);
-           // SeedRoles(context);
+            //  Run this seeds in order to get users and roles for users
+            //  SeedUsers(context);
+            //  SeedRoles(context);
         }
+
         private void SeedRoles(ApplicationDbContext context)
         {
 

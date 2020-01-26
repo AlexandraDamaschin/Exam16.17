@@ -33,7 +33,5 @@ namespace Exam16._17.Models.StudentLectureModel
         public virtual Subject assocSubject { get; set; }
 
         public virtual Student assocStudent { get; set; }
-
-
     }
 }
