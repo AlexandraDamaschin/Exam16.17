@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Exam16._17.Models.StudentLectureModel.Attendance">
+    <Position X="4.5" Y="1.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAABAAAAAAAAgAAAAAAAAAAQAAgAICAAA=</HashCode>
+      <FileName>Models\StudentLectureModel\Attendance.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exam16._17.Models.StudentLectureModel.Lecture">
+    <Position X="9" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>Models\StudentLectureModel\Lecture.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exam16._17.Models.StudentLectureModel.LectureSubject">
+    <Position X="9" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAEAAAACAAAAAAAAAAgAAAAAA=</HashCode>
+      <FileName>Models\StudentLectureModel\LectureSubject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exam16._17.Models.StudentLectureModel.Student">
+    <Position X="2.5" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEEAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAACAAg=</HashCode>
+      <FileName>Models\StudentLectureModel\Student.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exam16._17.Models.StudentLectureModel.StudentSubject">
+    <Position X="2.5" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAQAAgAACAAA=</HashCode>
+      <FileName>Models\StudentLectureModel\StudentSubject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Exam16._17.Models.StudentLectureModel.Subject">
+    <Position X="7" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEgAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAA=</HashCode>
+      <FileName>Models\StudentLectureModel\Subject.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

@@ -20,6 +20,29 @@ namespace Exam16._17.Migrations
             //SeedRoles(context);
         }
 
+        private void SeedUsers(ApplicationDbContext context)
+        {
+            //seeding two applicationUsers
+            context.Users.AddOrUpdate(u => u.Email, new ApplicationUser
+            {
+                Email = "ion.popescu@ulbsibiu.ro",
+                EmailConfirmed = true,
+                UserName = "ion.popescu@ulbsibiu.ro",
+                PasswordHash = new PasswordHasher().HashPassword("UlbsSibiu1$"),
+                SecurityStamp = Guid.NewGuid().ToString(),
+            });
+
+            context.Users.AddOrUpdate(u => u.Email, new ApplicationUser
+            {
+                Email = "alexandra.damaschin@ulbsibiu.ro",
+                EmailConfirmed = true,
+                UserName = "alexandra.damaschin@ulbsibiu.ro",
+                PasswordHash = new PasswordHasher().HashPassword("UlbsSibiu1$"),
+                SecurityStamp = Guid.NewGuid().ToString(),
+            });
+            context.SaveChanges();
+        }
+
         private void SeedRoles(ApplicationDbContext context)
         {
 
@@ -55,29 +78,6 @@ namespace Exam16._17.Migrations
             {
                 throw new Exception { Source = "Did not find student" };
             }
-            context.SaveChanges();
-        }
-
-        private void SeedUsers(ApplicationDbContext context)
-        {
-            //seeding two applicationUsers
-            context.Users.AddOrUpdate(u => u.Email, new ApplicationUser
-            {
-                Email = "ion.popescu@ulbsibiu.ro",
-                EmailConfirmed = true,
-                UserName = "ion.popescu@ulbsibiu.ro",
-                PasswordHash = new PasswordHasher().HashPassword("UlbsSibiu1$"),
-                SecurityStamp = Guid.NewGuid().ToString(),
-            });
-
-            context.Users.AddOrUpdate(u => u.Email, new ApplicationUser
-            {
-                Email = "alexandra.damaschin@ulbsibiu.ro",
-                EmailConfirmed = true,
-                UserName = "alexandra.damaschin@ulbsibiu.ro",
-                PasswordHash = new PasswordHasher().HashPassword("UlbsSibiu1$"),
-                SecurityStamp = Guid.NewGuid().ToString(),
-            });
             context.SaveChanges();
         }
     }
